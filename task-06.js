@@ -1,14 +1,14 @@
 import _ from 'lodash';
 
 const countWords = (str) => {
-    const words = str.split(' ');
+    // const words = str.split(' ');
     const result = {};
 
     if(str.length === 0) {
         return console.log(result);
     }
 
-    for (let word of words) {
+    for (let word of _.words(str)) {
         word = word.toLowerCase();
         if (_.has(result, word)) {
             result[word] += 1; 
