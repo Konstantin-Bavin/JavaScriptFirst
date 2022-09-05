@@ -1,18 +1,12 @@
 import _ from "lodash";
 
-const cloneDeep = (obj) => {
-    const result = cloneInnerObj(obj);
-
-    return result;
-};
-
-const cloneInnerObj = (innerObj) => {
+const cloneDeep = (innerObj) => {
     const innerObjEntries = Object.entries(innerObj);
     const result = {};
 
     for (const [key, value] of innerObjEntries) {
         if (_.isObject(value)) {
-           result[key] = cloneInnerObj(value);
+           result[key] = cloneDeep(value);
         } else {
            result[key] = value;
         }
