@@ -28,3 +28,4 @@ isBracketStructureBalanced('()');  // true
 isBracketStructureBalanced('[()]');  // true
 isBracketStructureBalanced('{<>}}'); // false
 isBracketStructureBalanced('{{{}}}');
+isBracketStructureBalanced('((');
